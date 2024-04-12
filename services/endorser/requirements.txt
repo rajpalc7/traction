@@ -12,7 +12,7 @@ gunicorn==20.1.0
 h11==0.13.0
 httptools==0.3.0
 idna==3.3
-itsdangerous==2.0.1
+itsdangerous==2.1.2
 Jinja2==3.0.3
 jose==1.0.0
 Mako==1.1.6
