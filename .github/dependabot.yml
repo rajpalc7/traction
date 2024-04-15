@@ -9,6 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "now"
+    reopen-closed: true
     groups:
       all-actions:
         patterns: [ "*" ]
