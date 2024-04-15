@@ -8,8 +8,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "now"
-    reopen-closed: true
+      interval: "weekly"
     groups:
       all-actions:
         patterns: [ "*" ]
