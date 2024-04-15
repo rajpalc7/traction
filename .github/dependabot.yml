@@ -73,9 +73,33 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major", "version-update:semver-patch"]
 
+  # Maintain dependencies for TypeScript and JavaScript
+  - package-ecosystem: "npm"
+    directory: "/demo/plugins/rpc/app"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-patch"]
+
+  # Maintain dependencies for TypeScript and JavaScript
+  - package-ecosystem: "pip"
+    directory: "/demo/plugins/rpc/controller"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
   # Maintain dependencies for dev Container
   - package-ecosystem: "devcontainers"
-    directory: "/plugins/.devcontainer"
+    directory: "/plugins/rpc/.devcontainer"
     schedule:
       interval: "weekly"
       day: "monday"
