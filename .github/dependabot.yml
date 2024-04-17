@@ -39,7 +39,31 @@ updates:
 
   # Maintain dependencies for Python Packages
   - package-ecosystem: "pip"
-    directory: "/services/tenant-lob/app"
+    directory: "/demo/plugins/rpc/controller"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  # Maintain dependencies for Python Packages
+  - package-ecosystem: "pip"
+    directory: "/plugins"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  # Maintain dependencies for Python Packages
+  - package-ecosystem: "pip"
+    directory: "/plugins/traction_innkeeper"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -85,18 +109,6 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major", "version-update:semver-patch"]
 
-  # Maintain dependencies for TypeScript and JavaScript
-  - package-ecosystem: "pip"
-    directory: "/demo/plugins/rpc/controller"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:00"
-      timezone: "Canada/Pacific"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
-
   # Maintain dependencies for dev Container
   - package-ecosystem: "devcontainers"
     directory: "/plugins/rpc/.devcontainer"
@@ -108,7 +120,7 @@ updates:
 
   # Maintain dependencies for dev Container
   - package-ecosystem: "devcontainers"
-    directory: "/plugins/demo"
+    directory: "/plugins/.devcontainer"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -126,6 +138,24 @@ updates:
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
+    directory: "/services/aca-py"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for docker
+  - package-ecosystem: "docker"
+    directory: "/services/endorser"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for docker
+  - package-ecosystem: "docker"
     directory: "/services/tenant-lob"
     schedule:
       interval: "weekly"
@@ -135,7 +165,7 @@ updates:
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
-    directory: "/services/aca-py"
+    directory: "/services/tenant-ui"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -169,15 +199,6 @@ updates:
       time: "04:00"
       timezone: "Canada/Pacific"
 
-  # Maintain dependencies for docker
-  - package-ecosystem: "docker"
-    directory: "/services/tenant-ui"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:00"
-      timezone: "Canada/Pacific"
-
   # Maintain dependencies for docker images inside manifests
   - package-ecosystem: "docker"
     directory: "/charts/traction"
@@ -186,6 +207,7 @@ updates:
       day: "monday"
       time: "04:00"
       timezone: "Canada/Pacific"
+      
   - package-ecosystem: "docker"
     directory: "/deploy/traction"
     schedule:
