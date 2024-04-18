@@ -27,7 +27,7 @@ updates:
 
   # Maintain dependencies for Python Packages
   - package-ecosystem: "pip"
-    directory: "/services/tenant-lob"
+    directory: "/demo/lob"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -138,7 +138,7 @@ updates:
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
-    directory: "/services/aca-py"
+    directory: "/demo/lob"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -147,25 +147,7 @@ updates:
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
-    directory: "/services/endorser"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:00"
-      timezone: "Canada/Pacific"
-
-  # Maintain dependencies for docker
-  - package-ecosystem: "docker"
-    directory: "/services/tenant-lob"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:00"
-      timezone: "Canada/Pacific"
-
-  # Maintain dependencies for docker
-  - package-ecosystem: "docker"
-    directory: "/services/tenant-ui"
+    directory: "/plugins/.devcontainer"
     schedule:
       interval: "weekly"
       day: "monday"
@@ -180,7 +162,7 @@ updates:
       day: "monday"
       time: "04:00"
       timezone: "Canada/Pacific"
-    
+
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
     directory: "/plugins/traction_innkeeper/docker"
@@ -192,7 +174,25 @@ updates:
 
   # Maintain dependencies for docker
   - package-ecosystem: "docker"
-    directory: "/plugins/.devcontainer"
+    directory: "/services/aca-py"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+    
+  # Maintain dependencies for docker
+  - package-ecosystem: "docker"
+    directory: "/services/endorser"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for docker
+  - package-ecosystem: "docker"
+    directory: "/services/tenant-ui"
     schedule:
       interval: "weekly"
       day: "monday"
